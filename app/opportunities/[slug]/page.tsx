@@ -42,7 +42,7 @@ export default async function OpportunityDetailPage({
     <div className="mx-auto max-w-3xl px-4 py-6">
       <Link
         href="/"
-        className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
+        className="inline-flex items-center gap-1 text-sm font-semibold text-accent transition-transform duration-150 hover:underline active:scale-[0.97]"
       >
         <svg
           width="10"
@@ -90,7 +90,7 @@ export default async function OpportunityDetailPage({
       <div className="mt-6 border-t border-border pt-4">
         <OutboundLink
           href={opportunity.applyUrl}
-          className="inline-block bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent/90"
+          className="inline-block bg-accent px-4 py-2 text-sm font-semibold text-white transition duration-150 active:scale-[0.97] [@media(hover:hover)_and_(pointer:fine)]:hover:bg-accent/90"
         >
           Apply
         </OutboundLink>

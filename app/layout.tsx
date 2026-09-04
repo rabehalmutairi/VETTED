@@ -20,7 +20,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col font-sans">
         <header className="border-b border-border">
           <div className="mx-auto max-w-3xl px-4 py-4">
-            <Link href="/" className="text-base font-semibold text-foreground">
+            <Link
+              href="/"
+              className="text-base font-semibold text-foreground transition-colors duration-150 [@media(hover:hover)_and_(pointer:fine)]:hover:text-accent"
+            >
               Opportunities
             </Link>
           </div>

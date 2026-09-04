@@ -14,7 +14,7 @@ export function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
   return (
     <Link
       href={`/opportunities/${opportunity.slug}`}
-      className="group block border-b border-border py-4 first:border-t hover:bg-accent-subtle/50 transition-colors duration-150"
+      className="group block border-b border-border py-4 first:border-t transition-colors duration-150 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-accent-subtle/50"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">

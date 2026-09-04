@@ -43,10 +43,10 @@ export function DiscoverList({ opportunities }: { opportunities: Opportunity[] }
                 key={filter.value}
                 type="button"
                 onClick={() => setTypeFilter(filter.value)}
-                className={`px-2 py-1 text-sm font-semibold transition-colors duration-150 ${
+                className={`px-2 py-1 text-sm font-semibold transition duration-150 active:scale-[0.97] ${
                   active
                     ? "bg-accent text-white"
-                    : "border border-border text-foreground hover:border-accent"
+                    : "border border-border text-foreground [@media(hover:hover)_and_(pointer:fine)]:hover:border-accent"
                 }`}
               >
                 {filter.label}
@@ -77,7 +77,7 @@ export function DiscoverList({ opportunities }: { opportunities: Opportunity[] }
             <button
               type="button"
               onClick={() => setTypeFilter("all")}
-              className="mt-2 text-sm font-semibold text-accent hover:underline"
+              className="mt-2 text-sm font-semibold text-accent transition-transform duration-150 hover:underline active:scale-[0.97]"
             >
               Clear filter
             </button>
