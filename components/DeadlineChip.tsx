@@ -12,14 +12,14 @@ export function DeadlineChip({ deadline }: DeadlineChipProps) {
 
   const styles = {
     open: "border border-accent text-accent",
-    "closing-soon": "bg-accent text-white",
-    today: "bg-accent text-white",
-    closed: "border border-border text-muted",
+    "closing-soon": "bg-accent text-ground",
+    today: "bg-accent text-ground",
+    closed: "border border-hairline text-muted",
   }[urgency];
 
   return (
     <span
-      className={`inline-block shrink-0 whitespace-nowrap px-2 py-1 text-sm font-semibold ${styles}`}
+      className={`inline-block shrink-0 whitespace-nowrap px-2 py-1 text-sm font-semibold font-mono ${styles}`}
     >
       {label}
     </span>

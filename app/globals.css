@@ -1,31 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #18181b;
-  --muted: #52525b;
-  --border: #e4e4e7;
-  --accent: #0b6e4f;
-  --accent-subtle: #e6f2ee;
+  --ground: #0a0a0a;
+  --surface: #121212;
+  --hairline: #262626;
+  --hairline-lit: #3a3a3a;
+  --ink: #ededed;
+  --muted: #a1a1aa;
+  --accent: #2fd480;
+  --accent-dim: #1a3d2e;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-hairline: var(--hairline);
+  --color-hairline-lit: var(--hairline-lit);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
-  --color-border: var(--border);
   --color-accent: var(--accent);
-  --color-accent-subtle: var(--accent-subtle);
+  --color-accent-dim: var(--accent-dim);
   --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--ground);
+  color: var(--ink);
 }
 
 ::selection {
-  background: var(--accent-subtle);
+  background: var(--accent-dim);
   color: var(--accent);
 }
 

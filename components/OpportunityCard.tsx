@@ -14,11 +14,11 @@ export function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
   return (
     <Link
       href={`/opportunities/${opportunity.slug}`}
-      className="group block border-b border-border py-4 first:border-t transition-colors duration-150 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-accent-subtle/50"
+      className="group block border-b border-hairline py-4 first:border-t transition-colors duration-150 [@media(hover:hover)_and_(pointer:fine)]:hover:bg-accent-dim/50"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
-          <h3 className="text-base font-semibold text-foreground truncate group-hover:underline">
+          <h3 className="text-base font-semibold text-ink truncate group-hover:underline">
             {opportunity.title}
           </h3>
           <p className="mt-1 text-sm text-muted">
@@ -28,7 +28,7 @@ export function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
             {opportunity.tags.map((tag) => (
               <span
                 key={tag}
-                className="border border-border px-2 py-1 text-sm text-muted"
+                className="border border-hairline px-2 py-1 text-sm text-muted"
               >
                 {tag}
               </span>

@@ -43,10 +43,10 @@ export function DiscoverList({ opportunities }: { opportunities: Opportunity[] }
                 key={filter.value}
                 type="button"
                 onClick={() => setTypeFilter(filter.value)}
-                className={`px-2 py-1 text-sm font-semibold transition duration-150 active:scale-[0.97] ${
+                className={`px-2 py-1 text-sm font-semibold font-mono transition duration-150 active:scale-[0.97] ${
                   active
-                    ? "bg-accent text-white"
-                    : "border border-border text-foreground [@media(hover:hover)_and_(pointer:fine)]:hover:border-accent"
+                    ? "bg-accent text-ground"
+                    : "border border-hairline text-ink [@media(hover:hover)_and_(pointer:fine)]:hover:border-hairline-lit"
                 }`}
               >
                 {filter.label}
@@ -60,7 +60,7 @@ export function DiscoverList({ opportunities }: { opportunities: Opportunity[] }
           <select
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value as SortOrder)}
-            className="border border-border px-2 py-1 text-sm text-foreground"
+            className="border border-hairline px-2 py-1 text-sm text-ink font-mono"
           >
             <option value="closing-soon">Closing soon</option>
             <option value="recently-added">Recently verified</option>
@@ -70,8 +70,8 @@ export function DiscoverList({ opportunities }: { opportunities: Opportunity[] }
 
       <div className="mt-4">
         {visible.length === 0 ? (
-          <div className="border border-border px-4 py-8 text-center">
-            <p className="text-base font-semibold text-foreground">
+          <div className="border border-hairline px-4 py-8 text-center">
+            <p className="text-base font-semibold text-ink">
               No open listings match this filter
             </p>
             <button

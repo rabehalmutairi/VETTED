@@ -62,7 +62,7 @@ export default async function OpportunityDetailPage({
 
       <div className="mt-4 flex items-start justify-between gap-4">
         <div className="min-w-0">
-          <h1 className="text-xl font-semibold text-foreground">
+          <h1 className="text-xl font-semibold text-ink">
             {opportunity.title}
           </h1>
           <p className="mt-1 text-sm text-muted">
@@ -76,27 +76,27 @@ export default async function OpportunityDetailPage({
         {opportunity.tags.map((tag) => (
           <span
             key={tag}
-            className="border border-border px-2 py-1 text-sm text-muted"
+            className="border border-hairline px-2 py-1 text-sm text-muted"
           >
             {tag}
           </span>
         ))}
       </div>
 
-      <p className="mt-6 text-base text-foreground whitespace-pre-line">
+      <p className="mt-6 text-base text-ink whitespace-pre-line">
         {opportunity.description}
       </p>
 
-      <div className="mt-6 border-t border-border pt-4">
+      <div className="mt-6 border-t border-hairline pt-4">
         <OutboundLink
           href={opportunity.applyUrl}
-          className="inline-block bg-accent px-4 py-2 text-sm font-semibold text-white transition duration-150 active:scale-[0.97] [@media(hover:hover)_and_(pointer:fine)]:hover:bg-accent/90"
+          className="inline-block bg-accent px-4 py-2 text-sm font-semibold text-ground transition duration-150 active:scale-[0.97] [@media(hover:hover)_and_(pointer:fine)]:hover:bg-accent/90"
         >
           Apply
         </OutboundLink>
       </div>
 
-      <p className="mt-6 text-sm text-muted">
+      <p className="mt-6 text-sm text-muted font-mono">
         Last verified {formatDate(opportunity.lastVerifiedAt)}
       </p>
     </div>
