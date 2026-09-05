@@ -42,14 +42,22 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
               Opportunities
             </Link>
             {user ? (
-              <form action={signOut}>
-                <button
-                  type="submit"
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/profile"
                   className="text-sm font-mono text-muted transition-colors duration-150 [@media(hover:hover)_and_(pointer:fine)]:hover:text-ink"
                 >
-                  Sign out
-                </button>
-              </form>
+                  Profile
+                </Link>
+                <form action={signOut}>
+                  <button
+                    type="submit"
+                    className="text-sm font-mono text-muted transition-colors duration-150 [@media(hover:hover)_and_(pointer:fine)]:hover:text-ink"
+                  >
+                    Sign out
+                  </button>
+                </form>
+              </div>
             ) : (
               <Link
                 href="/sign-in"
