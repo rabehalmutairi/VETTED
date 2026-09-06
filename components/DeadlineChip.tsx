@@ -4,8 +4,8 @@ interface DeadlineChipProps {
   deadline: string;
 }
 
-// Urgency reads through weight and fill, not a second color, per CLAUDE.md's
-// one-accent rule — closing-soon fills solid, everything else stays outlined.
+// Urgency reads through weight and fill, not a second color: closing-soon
+// fills solid, everything else stays outlined.
 export function DeadlineChip({ deadline }: DeadlineChipProps) {
   const urgency = getDeadlineUrgency(deadline);
   const label = formatDeadlineLabel(deadline);

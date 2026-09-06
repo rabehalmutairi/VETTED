@@ -4,8 +4,8 @@ interface OutboundLinkProps {
   className?: string;
 }
 
-// Every outbound URL is https-only and shows its destination domain, per
-// CLAUDE.md's link-safety rules — never a bare "click here" to an unverified host.
+// Every outbound URL is https-only and shows its destination domain,
+// never a bare "click here" to an unverified host.
 export function OutboundLink({ href, children, className }: OutboundLinkProps) {
   let domain: string;
   try {
