@@ -1,6 +1,6 @@
-# Opportunities (working name)
+# VETTED 
 
-A small, high-accuracy directory of tech opportunities (hackathons, bootcamps, programs,
+AI-Assisted Tech Opportunities, high-accuracy directory of tech opportunities (hackathons, bootcamps, programs,
 competitions, internships) for university students and fresh graduates in Saudi Arabia.
 
 > **Status: Work in progress.** Discover is built and themed against placeholder data.
