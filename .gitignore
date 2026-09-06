@@ -45,3 +45,10 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# local tooling, not part of the project
+.claude/
+.impeccable/
+AGENTS.md
+CLAUDE.md
+DESIGN.md
