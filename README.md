@@ -4,8 +4,8 @@ A small, high-accuracy directory of tech opportunities (hackathons, bootcamps, p
 competitions, internships) for university students and fresh graduates in Saudi Arabia.
 
 > **Status: Work in progress.** Discover is built and themed against placeholder data.
-> Auth and profile persistence are built but not yet verified end-to-end. Admin CRUD and
-> the collab feed are not started. See [Status](#status) below for the full breakdown.
+> Auth and profile persistence are built. Admin CRUD and
+> the collab feed are under work. See [Status](#status) below for the full breakdown.
 
 ---
 
@@ -69,25 +69,9 @@ This deliberately stays out of the deployed app:
 
 Not implemented yet. Recorded here because it's a decided part of the design, not because it
 exists in this repository. `extraction/` doesn't exist yet.
+```
 
----
-
-## Deliberate non-scope
-
-Explicitly decided against for this version, and why:
-
-| Not building | Why |
-|---|---|
-| AI-based matching / recommendation | The product's entire pitch is "a human checked this." An automated ranking layer between the listing and the student is exactly the kind of unverifiable middle step this project exists to avoid. |
-| Vector / semantic search | At 25-40 live listings, a filter and a sort do everything embeddings would, with nothing to go wrong. Worth reaching for once the catalog outgrows a human being able to browse it directly, not before. |
-| Scraping listings automatically | Volume and correctness trade off against each other here. Scraping buys volume at the cost of the one property, verified accuracy, that differentiates this from every other aggregator a student could already find. |
-| Chat / DMs / matching feed | Out of scope for a directory. Contact happens through a rate-limited reveal endpoint and then moves off-platform. |
-
-None of this is "not yet." It's a standing decision, kept here so it doesn't get quietly
-reconsidered mid-build without someone noticing the tradeoff.
-
----
-
+```
 ## Status
 
 | Surface | Status |
