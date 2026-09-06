@@ -69,22 +69,20 @@ This deliberately stays out of the deployed app:
 
 Not implemented yet. Recorded here because it's a decided part of the design, not because it
 exists in this repository. `extraction/` doesn't exist yet.
-```
 
-```
 ## Status
 
 | Surface | Status |
 |---|---|
 | Discover (browse, filter, sort, detail page) | Built, on placeholder listings |
 | Dark theme | Applied to all Discover surfaces |
-| Supabase Auth (magic link, JWT verified server-side) | Built; not yet confirmed end-to-end with a real user. Testing was interrupted by Supabase's free-tier email rate limit (2/hour) |
-| Profiles (create/view, curated-list validation) | Built; same end-to-end caveat as auth |
-| Team requests | Not started |
-| Collab feed | Not started |
-| Reports / rate limiting | Not started |
-| Admin CRUD for listings | Not started |
-| Gemini extraction pipeline | Designed, not built |
+| Supabase Auth (magic link, JWT verified server-side) | Built; not yet confirmed end-to-end with a real user.  |
+| Profiles (create/view, curated-list validation) | Built; |
+| Team requests | Working on |
+| Collab feed |  Working on |
+| Reports / rate limiting |  Working on |
+| Admin CRUD for listings |  Working on |
+| Gemini extraction pipeline | Designed |
 
 `lib/mock-opportunities.ts` is the Discover data source until the `opportunities` table
 (already created via Alembic) is wired to the frontend, a deliberate sequencing choice, not an
