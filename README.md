@@ -24,18 +24,18 @@ including which parts of the stack use automation and which deliberately don't.
 
 ## Architecture
 
-**Frontend** — Next.js 16 (App Router) + TypeScript + Tailwind v4. Server-first: pages fetch
-through FastAPI rather than reimplementing query logic client-side.
+The frontend is Next.js 16 (App Router), TypeScript, and Tailwind v4, and it stays server-first:
+pages fetch through FastAPI instead of reimplementing query logic client-side. FastAPI and
+Pydantic handle the backend, deployed on Vercel's Python runtime right alongside the frontend, so
+production has no CORS to worry about (both sides share an origin there; CORS only gets enabled
+for local dev, where they run on separate ports).
 
-**Backend** — FastAPI + Pydantic, deployed on Vercel's Python runtime alongside the frontend
-(same origin in production, so no CORS in prod; CORS is only enabled for local dev where the
-two run on separate ports).
+Data lives in Supabase Postgres, with the schema managed through Alembic migrations
+(`alembic/versions/`). Supabase is only ever touched from the FastAPI layer, never directly from
+the frontend.
 
-**Data** — Supabase Postgres, schema managed through Alembic migrations (`alembic/versions/`).
-Supabase is only ever touched from the FastAPI layer, never directly from the frontend.
-
-**Auth** — Supabase Auth, magic-link sign-in. The frontend never sees a session secret; FastAPI
-verifies the Supabase JWT server-side (`api/auth.py`) before trusting any request.
+Auth runs through Supabase's magic-link sign-in. The frontend never sees a session secret; FastAPI
+verifies the Supabase JWT server-side (`api/auth.py`) before it trusts any request.
 
 ```
 Next.js (app/, components/)  ->  FastAPI (api/)  ->  Supabase Postgres
